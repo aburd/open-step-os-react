@@ -1,0 +1,17 @@
+@import 'styles/colors';
+
+.Window {
+  position: fixed;
+  border: 1px solid $border-window;
+
+  hr {
+    border-top: 1px solid $border-menu-dark;
+    border-bottom: 1px solid $border-menu-light;
+  }
+  
+  .Window--inner {
+    padding: 8px 0;
+    border-top: 1px solid $border-window; 
+    background: $bg-menu;
+  }
+}

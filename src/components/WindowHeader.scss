@@ -5,6 +5,7 @@
   padding: 4px;
   background: $bg-menu;
   color: $font-primary;
+  user-select: none;
 
   .IconButton {
     position: absolute;

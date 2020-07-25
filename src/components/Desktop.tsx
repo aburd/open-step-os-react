@@ -13,8 +13,21 @@ export default function Desktop() {
       <br />
       <Window
         title="File Viewer"
-        active={false}
+        initialPosition={[10, 10]}
+        active
       />
+
+      <br />
+
+      <Window
+        title="File Viewer"
+        initialPosition={[20, 20]}
+        active={false}
+      >
+        <p>Section 1</p>
+        <hr />
+        <p>Section 2</p>
+      </Window>
 
     </div>
   )
