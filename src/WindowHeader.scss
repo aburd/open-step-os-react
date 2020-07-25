@@ -1,0 +1,13 @@
+@import 'styles/colors';
+
+.WindowHeader {
+  padding: 4px;
+  background: $bg-menu;
+  color: $font-primary;
+
+  &.active {
+    background: $bg-header-active;
+    color: $font-active;
+    font-weight: bold;
+  }
+}

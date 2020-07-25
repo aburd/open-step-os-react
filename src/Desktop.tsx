@@ -1,10 +1,13 @@
 import React from 'react'
+import WindowHeader from './WindowHeader'
 import './Desktop.scss'
 
 export default function Desktop() {
   return (
     <div className="Desktop">
-      <h1>Test</h1>
+      <WindowHeader text="Regular" />
+      <br />
+      <WindowHeader text="Active" active />
     </div>
   )
 }
