@@ -1,5 +1,6 @@
 import React from 'react'
 import WindowHeader from './WindowHeader'
+import Window from './Window'
 import './Desktop.scss'
 
 export default function Desktop() {
@@ -10,11 +11,9 @@ export default function Desktop() {
         onCloseClick={() => alert('Clicked')}
       />
       <br />
-      <WindowHeader
-        text="Active"
-        active
-        textCenter
-        onCloseClick={() => alert('Clicked')}
+      <Window
+        title="File Viewer"
+        active={false}
       />
 
     </div>

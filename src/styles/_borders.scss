@@ -6,6 +6,15 @@
   border-right: 1px solid $border-menu-dark;
   border-bottom: 1px solid $border-menu-dark;
 
+  &.active {
+    border-top: 1px solid $border-menu-active-light;
+    border-left: 1px solid $border-menu-active-light;
+    border-right: 1px solid $border-menu-active-dark;
+    border-bottom: 1px solid $border-menu-active-dark;
+  }
+}
+
+button.convex-border {
   &:active {
     border-top: 1px solid $border-menu-dark;
     border-left: 1px solid $border-menu-dark;
@@ -14,11 +23,6 @@
   }
 
   &.active {
-    border-top: 1px solid $border-menu-active-light;
-    border-left: 1px solid $border-menu-active-light;
-    border-right: 1px solid $border-menu-active-dark;
-    border-bottom: 1px solid $border-menu-active-dark;
-
     &:active {
       border-top: 1px solid $border-menu-active-light;
       border-left: 1px solid $border-menu-active-light;
