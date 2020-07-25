@@ -7,7 +7,7 @@ export default function Desktop() {
     <div className="Desktop">
       <WindowHeader text="Regular" />
       <br />
-      <WindowHeader text="Active" active />
+      <WindowHeader text="Active" active textCenter />
     </div>
   )
 }
