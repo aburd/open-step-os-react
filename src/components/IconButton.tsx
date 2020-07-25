@@ -1,4 +1,5 @@
 import React from 'react'
+import './IconButton.scss'
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   iconClass: string

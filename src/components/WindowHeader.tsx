@@ -1,4 +1,5 @@
 import React from 'react'
+import IconButton from './IconButton'
 import './WindowHeader.scss'
 
 interface Props {
@@ -19,7 +20,7 @@ const WindowHeader: React.SFC<Props> = ({
       <div className="WindowHeader--inner">
         {text}
         {onCloseClick && (
-          <button className="btn-close" onClick={onCloseClick}>X</button>
+          <IconButton iconClass="" onClick={onCloseClick} />
         )}
       </div>
     </div>
