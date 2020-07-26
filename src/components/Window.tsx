@@ -11,8 +11,9 @@ interface Position {
 interface Props {
   title: string
   active: boolean
-  initialPosition: Position;
-  initialWidth?: number;
+  initialPosition: Position
+  onCloseClick?: () => void
+  initialWidth?: number
 }
 
 const Window: React.SFC<Props> = ({
@@ -20,6 +21,7 @@ const Window: React.SFC<Props> = ({
   active,
   initialPosition,
   initialWidth = 100,
+  onCloseClick,
   children,
 }) => {
   const headerRef = useRef(null)
@@ -36,7 +38,7 @@ const Window: React.SFC<Props> = ({
             text={title}
             active={active}
             textCenter={active}
-            onCloseClick={() => alert('Clicked')}
+            onCloseClick={onCloseClick}
           />
         </span>
         <div className="Window--inner">
