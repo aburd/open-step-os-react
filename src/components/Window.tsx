@@ -45,10 +45,14 @@ const Window: React.SFC<Props> = ({
         <Draggable
           axis="x"
           bounds={{ right: 0 }}
-          onStart={() => updateResizeActive(true)}
+          onStart={() => {
+            updateResizeActive(true)
+          }}
           onDrag={(e) => {
             // @ts-ignore
-            updateWidth(width + e.movementX)
+            const newWidth = width + e.movementX
+            if (newWidth < 100) return false
+            updateWidth(newWidth)
           }}
           onStop={() => updateResizeActive(false)}
         >
