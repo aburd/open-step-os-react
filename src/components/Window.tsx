@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import Draggable from 'react-draggable'
 import WindowHeader from './WindowHeader'
 import './Window.scss'
 
@@ -14,36 +15,22 @@ interface Props {
 const Window: React.SFC<Props> = ({
   title,
   active,
-  initialPosition,
-  initialWidth,
   children,
 }) => {
-  const [top, updateTop] = useState(initialPosition[0])
-  const [left, updateLeft] = useState(initialPosition[1])
-  const [width, updateWidth] = useState(initialWidth || 100)
   return (
-    <div
-      className="Window"
-      style={{
-        top: `${top}px`,
-        left: `${left}px`,
-        width: `${width}px`,
-      }}
-    >
-      <WindowHeader
-        text={title}
-        active={active}
-        textCenter={active}
-        onCloseClick={() => alert('Clicked')}
-        onDrag={(dx, dy) => {
-          updateTop(top + dy)
-          updateLeft(left + dx)
-        }}
-      />
-      <div className="Window--inner">
-        {children}
+    <Draggable>
+      <div className="Window">
+        <WindowHeader
+          text={title}
+          active={active}
+          textCenter={active}
+          onCloseClick={() => alert('Clicked')}
+        />
+        <div className="Window--inner">
+          {children}
+        </div>
       </div>
-    </div>
+    </Draggable>
   )
 }
 

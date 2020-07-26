@@ -7,7 +7,6 @@ interface Props {
   active?: boolean
   textCenter?: boolean
   onCloseClick?: () => void
-  onDrag?: (dx: number, dy: number) => void
 }
 
 const WindowHeader: React.SFC<Props> = ({
@@ -15,19 +14,10 @@ const WindowHeader: React.SFC<Props> = ({
   active,
   textCenter,
   onCloseClick,
-  onDrag,
 }) => {
-  const [mouseIsDown, updateMouseIsDown] = useState(false)
-
   return (
     <div
       className={`WindowHeader convex-border ${textCenter ? 'text-center' : ''} ${active ? 'active' : ''}`}
-      onMouseMove={(e) => {
-        if (mouseIsDown && onDrag) onDrag(e.movementX, e.movementY)
-      }}
-      onMouseDown={() => updateMouseIsDown(true)}
-      onMouseUp={() => updateMouseIsDown(false)}
-      onMouseLeave={() => updateMouseIsDown(false)}
     >
       <div className="WindowHeader--inner">
         {text}
