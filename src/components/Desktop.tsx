@@ -23,8 +23,6 @@ export default function Desktop() {
         <BarButton text="Log Out" />
       </Window>
 
-      <br />
-
       <Window
         title="File Viewer"
         initialPosition={{ x: 100, y: 10 }}
@@ -33,6 +31,16 @@ export default function Desktop() {
         <p>Section 1</p>
         <hr />
         <p>Section 2</p>
+      </Window>
+
+      <Window
+        title="Info"
+        initialPosition={{ x: 50, y: 100 }}
+        initialWidth={700}
+        onCloseClick={() => alert('Closed!')}
+        active
+      >
+
       </Window>
     </div>
   )

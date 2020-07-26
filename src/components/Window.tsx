@@ -12,8 +12,8 @@ interface Props {
   title: string
   active: boolean
   initialPosition: Position
-  onCloseClick?: () => void
   initialWidth?: number
+  onCloseClick?: () => void
 }
 
 const Window: React.SFC<Props> = ({

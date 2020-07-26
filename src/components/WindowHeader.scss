@@ -6,10 +6,7 @@
     top: 2px;
     right: 2px;
   }
-
-  &.text-center {
-    .IconButton {
-      left: 4px;
-    }
+  .IconButton.icon--minimize {
+    left: 2px;
   }
 }

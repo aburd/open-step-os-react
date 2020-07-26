@@ -7,6 +7,7 @@ interface Props {
   text: string
   active?: boolean
   textCenter?: boolean
+  onMinimizeClick?: () => void
   onCloseClick?: () => void
 }
 
@@ -14,6 +15,7 @@ const WindowHeader: React.SFC<Props> = ({
   text,
   active,
   textCenter,
+  onMinimizeClick,
   onCloseClick,
 }) => {
   return (
@@ -23,8 +25,11 @@ const WindowHeader: React.SFC<Props> = ({
       >
         <div className="WindowHeader--inner">
           {text}
+          {onMinimizeClick && (
+            <IconButton iconClass="icon-minimize" onClick={onMinimizeClick} />
+          )}
           {onCloseClick && (
-            <IconButton iconClass="" onClick={onCloseClick} />
+            <IconButton iconClass="icon-close" onClick={onCloseClick} />
           )}
         </div>
       </div>
