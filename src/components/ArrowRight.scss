@@ -1,5 +1,13 @@
 @import 'styles/colors';
 
 .ArrowRight {
-
+  .rect--left {
+    fill: #000;
+  }
+  .rect--top {
+    fill: $border-menu-dark;
+  }
+  .rect--bottom {
+    fill: $border-menu-light;
+  }
 }

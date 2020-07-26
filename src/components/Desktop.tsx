@@ -10,7 +10,14 @@ export default function Desktop() {
         title="File Viewer"
         initialPosition={{ x: 0, y: 0}}
         active
-      />
+      >
+        <BarButton
+          text="Sup 1"
+        />
+        <BarButton
+          text="Sup 2"
+        />
+      </Window>
 
       <br />
 
@@ -23,9 +30,6 @@ export default function Desktop() {
         <hr />
         <p>Section 2</p>
       </Window>
-      <BarButton
-        text="Hello Bar button"
-      />
     </div>
   )
 }
