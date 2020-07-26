@@ -1,11 +1,15 @@
 import React from 'react'
 import './ArrowRight.scss'
 
-export default function ArrowRight() {
+interface Props {
+  height?: number
+}
+
+const ArrowRight: React.SFC<Props> = ({ height = 7 }) => {
   return (
     <svg
       className="ArrowRight"
-      height={14}
+      height={height}
       viewBox="0 0 7 7"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -33,3 +37,5 @@ export default function ArrowRight() {
     </svg>
   )
 }
+
+export default ArrowRight

@@ -7,16 +7,20 @@ export default function Desktop() {
   return (
     <div className="Desktop">
       <Window
-        title="File Viewer"
+        title="Workspace"
         initialPosition={{ x: 0, y: 0}}
         active
       >
-        <BarButton
-          text="Sup 1"
-        />
-        <BarButton
-          text="Sup 2"
-        />
+        <BarButton text="Info" />
+        <BarButton text="File" />
+        <BarButton text="Edit" />
+        <BarButton text="Disk" />
+        <BarButton text="View" />
+        <BarButton text="Tools" />
+        <BarButton text="Windows" />
+        <BarButton text="Services" />
+        <BarButton text="Hide" />
+        <BarButton text="Log Out" />
       </Window>
 
       <br />
