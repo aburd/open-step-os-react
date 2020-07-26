@@ -1,0 +1,29 @@
+.WindowInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  padding: 16px;
+  .WindowInfo--splash {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding-bottom: 16px;
+    > img {
+      width: 60px;
+      height: 75px;
+      margin-right: 20px;
+    }
+    > h1 {
+      font-size: 4rem;
+      line-height: 37px;
+      font-weight: lighter;
+      .bottom {
+        margin-left: 15px;
+      }
+    }
+  }
+  .WindowInfo--authors {
+    text-align: center;
+  }
+}

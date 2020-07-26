@@ -1,6 +1,7 @@
 import React from 'react'
 import BarButton from './BarButton'
 import Window from './Window'
+import WindowInfo from './WindowInfo'
 import './Desktop.scss'
 
 export default function Desktop() {
@@ -36,11 +37,11 @@ export default function Desktop() {
       <Window
         title="Info"
         initialPosition={{ x: 50, y: 100 }}
-        initialWidth={700}
+        initialWidth={500}
         onCloseClick={() => alert('Closed!')}
         active
       >
-
+        <WindowInfo />
       </Window>
     </div>
   )
