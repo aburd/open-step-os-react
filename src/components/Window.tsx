@@ -19,21 +19,16 @@ const Window: React.SFC<Props> = ({
   title,
   active,
   initialPosition,
-  initialWidth,
+  initialWidth = 100,
   children,
 }) => {
   const headerRef = useRef(null)
-  const [width, updateWidth] = useState(initialWidth || 100)
+  const [width, updateWidth] = useState(initialWidth)
+  const [resizeActive, updateResizeActive] = useState(false)
   return (
     <Draggable
       defaultPosition={initialPosition}
-      onStart={(e) => {
-        // @ts-ignore
-        const classes = [...e.target.classList]
-        if (!['Bar', 'WindowHeader--inner'].some(c => classes.includes(c))) {
-          return false
-        }
-      }}
+      handle=".Bar, .WindowHeader--inner"
     >
       <div className="Window" style={{ width }}>
         <span ref={headerRef}>
@@ -47,6 +42,22 @@ const Window: React.SFC<Props> = ({
         <div className="Window--inner">
           {children}
         </div>
+        <Draggable
+          axis="x"
+          bounds={{ right: 0 }}
+          onStart={() => updateResizeActive(true)}
+          onDrag={(e) => {
+            // @ts-ignore
+            updateWidth(width + e.movementX)
+          }}
+          onStop={() => updateResizeActive(false)}
+        >
+          <span className="resize-east"></span>
+        </Draggable>
+        <div
+          className={`resize-background ${resizeActive ? 'active' : ''}`}
+          style={{ width }}
+        />
       </div>
     </Draggable>
   )

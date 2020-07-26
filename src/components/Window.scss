@@ -1,6 +1,7 @@
 @import 'styles/colors';
 
 .Window {
+  position: relative;
   display: inline-block;
   border: 1px solid $border-window;
 
@@ -13,5 +14,16 @@
     border-top: 1px solid $border-window; 
     background: $bg-menu;
     overflow: auto;
+  }
+
+  span.resize-east {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    &:hover {
+      cursor: e-resize;
+    }
   }
 }
