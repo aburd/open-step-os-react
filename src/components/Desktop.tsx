@@ -1,5 +1,5 @@
 import React from 'react'
-import WindowHeader from './WindowHeader'
+import BarButton from './BarButton'
 import Window from './Window'
 import './Desktop.scss'
 
@@ -23,7 +23,9 @@ export default function Desktop() {
         <hr />
         <p>Section 2</p>
       </Window>
-
+      <BarButton
+        text="Hello Bar button"
+      />
     </div>
   )
 }
