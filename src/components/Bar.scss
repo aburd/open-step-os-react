@@ -1,0 +1,15 @@
+@import 'styles/colors';
+
+.Bar {
+  position: relative;
+  padding: 4px;
+  background: $bg-menu;
+  color: $font-primary;
+  user-select: none;
+
+  &.active {
+    background: $bg-header-active;
+    color: $font-active;
+    font-weight: bold;
+  }
+}

@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react'
+import React from 'react'
+import Bar from './Bar'
 import IconButton from './IconButton'
 import './WindowHeader.scss'
 
@@ -16,16 +17,18 @@ const WindowHeader: React.SFC<Props> = ({
   onCloseClick,
 }) => {
   return (
-    <div
-      className={`WindowHeader convex-border ${textCenter ? 'text-center' : ''} ${active ? 'active' : ''}`}
-    >
-      <div className="WindowHeader--inner">
-        {text}
-        {onCloseClick && (
-          <IconButton iconClass="" onClick={onCloseClick} />
-        )}
+    <Bar active={active}>
+      <div
+        className={`WindowHeader ${textCenter ? 'text-center' : ''}`}
+      >
+        <div className="WindowHeader--inner">
+          {text}
+          {onCloseClick && (
+            <IconButton iconClass="" onClick={onCloseClick} />
+          )}
+        </div>
       </div>
-    </div>
+    </Bar>
   )
 }
 

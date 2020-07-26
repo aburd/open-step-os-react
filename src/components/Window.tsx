@@ -3,7 +3,10 @@ import Draggable from 'react-draggable'
 import WindowHeader from './WindowHeader'
 import './Window.scss'
 
-type Position = [number, number];
+interface Position {
+  x: number,
+  y: number,
+}
 
 interface Props {
   title: string
@@ -15,10 +18,13 @@ interface Props {
 const Window: React.SFC<Props> = ({
   title,
   active,
+  initialPosition,
   children,
 }) => {
   return (
-    <Draggable>
+    <Draggable
+      defaultPosition={initialPosition}
+    >
       <div className="Window">
         <WindowHeader
           text={title}

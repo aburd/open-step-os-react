@@ -6,14 +6,9 @@ import './Desktop.scss'
 export default function Desktop() {
   return (
     <div className="Desktop">
-      <WindowHeader
-        text="Regular"
-        onCloseClick={() => alert('Clicked')}
-      />
-      <br />
       <Window
         title="File Viewer"
-        initialPosition={[10, 10]}
+        initialPosition={{ x: 0, y: 0}}
         active
       />
 
@@ -21,7 +16,7 @@ export default function Desktop() {
 
       <Window
         title="File Viewer"
-        initialPosition={[20, 20]}
+        initialPosition={{ x: 100, y: 10 }}
         active={false}
       >
         <p>Section 1</p>
