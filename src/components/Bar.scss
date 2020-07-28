@@ -12,4 +12,7 @@
     color: $font-active;
     font-weight: bold;
   }
+  &.active-white {
+    background: $bg-light;
+  }
 }

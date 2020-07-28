@@ -3,26 +3,12 @@ import BarButton from './BarButton'
 import Window from './Window'
 import WindowInfo from './WindowInfo'
 import './Desktop.scss'
+import WorkspaceWindow from './WorkspaceWindow'
 
 export default function Desktop() {
   return (
     <div className="Desktop">
-      <Window
-        title="Workspace"
-        initialPosition={{ x: 0, y: 0}}
-        active
-      >
-        <BarButton text="Info" />
-        <BarButton text="File" />
-        <BarButton text="Edit" />
-        <BarButton text="Disk" />
-        <BarButton text="View" />
-        <BarButton text="Tools" />
-        <BarButton text="Windows" />
-        <BarButton text="Services" />
-        <BarButton text="Hide" />
-        <BarButton text="Log Out" />
-      </Window>
+      <WorkspaceWindow />
 
       <Window
         title="File Viewer"
