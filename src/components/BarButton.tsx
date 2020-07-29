@@ -6,7 +6,7 @@ import './BarButton.scss'
 interface Props {
   text: string
   active?: boolean
-  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void
+  onClick?: (text: string) => void
 }
 
 const BarButton: React.SFC<Props> = ({
@@ -18,7 +18,7 @@ const BarButton: React.SFC<Props> = ({
     <Bar
       active={false}
       className={`${active ? 'active-white' : ''}`}
-      onClick={onClick}
+      onClick={() => onClick(text)}
     >
       <div
         className={`BarButton`}

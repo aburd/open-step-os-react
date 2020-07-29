@@ -1,3 +1,9 @@
 .WorkspaceWindow {
   position: relative;
+
+  .sub-menu {
+    position: absolute;
+    top: 27px;
+    left: 10%;
+  }
 }
